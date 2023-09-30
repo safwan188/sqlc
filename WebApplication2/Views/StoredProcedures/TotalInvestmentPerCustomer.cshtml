@@ -1,0 +1,30 @@
+﻿@model IEnumerable<WebApplication2.Models.TotalInvestmentPerCustomerViewModel>
+
+<h2>Total Investment Per Customer</h2>
+
+@if(Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Total Investment</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.FirstName</td>
+                    <td>@item.LastName</td>
+                    <td>@item.TotalInvestment.ToString("C")</td> <!-- Display as currency -->
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No data available.</p>
+}

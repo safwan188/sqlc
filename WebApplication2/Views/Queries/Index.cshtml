@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Queries Index";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Queries</h1>
+    <ul>
+       
+        <li><a href="@Url.Action("TopTransactionAmounts", "Queries")">Top 5% Transaction Amounts</a></li>
+        <li><a href="@Url.Action("TransactionTypeConsistencyOverTime", "Queries")">Transaction Type Consistency Over Time</a></li>
+        <li><a href="@Url.Action("HighValueCustomers", "Queries")">High-Value Customers</a></li>
+        <li><a href="@Url.Action("AccountBalanceStatus", "Queries")">Account Balance Status</a></li>
+        <li><a href="@Url.Action("BankerPerformance", "Queries")">Banker Performance</a></li>
+        <li><a href="@Url.Action("CustomerSalaryVsLoanAmount", "Queries")">Customer Salary Vs Loan Amount</a></li>
+        <li><a href="@Url.Action("OverdueLoans", "Queries")">Overdue Loans</a></li>
+        <li><a href="@Url.Action("MostCommonTransactionTypes", "Queries")">Most Common Transaction Types</a></li>
+        <li><a href="@Url.Action("CustomerLoanToSalaryRatio", "Queries")">Customer Loan to Salary Ratio</a></li>
+    </ul>
+</div>

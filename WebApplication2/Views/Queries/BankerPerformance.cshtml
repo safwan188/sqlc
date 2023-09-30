@@ -1,0 +1,22 @@
+﻿@model IEnumerable<BankerPerformanceViewModel>
+
+<h2>Banker Performance</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Number Of Accounts Managed</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.NumberOfAccountsManaged</td>
+            </tr>
+        }
+    </tbody>
+</table>

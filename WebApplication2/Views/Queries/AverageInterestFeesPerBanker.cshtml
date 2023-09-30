@@ -1,0 +1,22 @@
+﻿@model IEnumerable<AverageInterestFeesPerBankerViewModel>
+
+<h2>Average Interest Fees Per Banker</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Average Interest Fees</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.AverageInterestFees</td>
+            </tr>
+        }
+    </tbody>
+</table>

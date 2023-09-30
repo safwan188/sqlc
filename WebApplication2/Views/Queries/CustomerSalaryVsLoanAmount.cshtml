@@ -1,0 +1,24 @@
+﻿@model IEnumerable<CustomerSalaryVsLoanAmountViewModel>
+
+<h2>Customer Salary Vs Loan Amount</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Salary Amount</th>
+            <th>Total Loan Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.SalaryAmount</td>
+                <td>@item.TotalLoanAmount</td>
+            </tr>
+        }
+    </tbody>
+</table>

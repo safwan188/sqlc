@@ -1,0 +1,20 @@
+﻿@model IEnumerable<MostCommonTransactionTypesViewModel>
+
+<h2>Most Common Transaction Types</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Number Of Occurrences</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Type</td>
+                <td>@item.NumberOfOccurrences</td>
+            </tr>
+        }
+    </tbody>
+</table>

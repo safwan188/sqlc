@@ -1,0 +1,22 @@
+﻿@model IEnumerable<TransactionTypeConsistencyViewModel>
+
+<h2>Transaction Type Consistency Over Time</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Number Of Transactions</th>
+            <th>Average Transaction Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Type</td>
+                <td>@item.NumberOfTransactions</td>
+                <td>@item.AverageTransactionAmount</td>
+            </tr>
+        }
+    </tbody>
+</table>

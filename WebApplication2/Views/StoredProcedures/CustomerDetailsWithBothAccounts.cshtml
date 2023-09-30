@@ -1,0 +1,32 @@
+﻿@model WebApplication2.Models.CustomerDetailsWithBothAccountsCombinedViewModel
+
+<h2>Customer Details with Both Accounts</h2>
+
+@if(Model.Results != null && Model.Results.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Customer First Name</th>
+                <th>Customer Last Name</th>
+                <th>Manager First Name</th>
+                <th>Manager Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var result in Model.Results)
+            {
+                <tr>
+                    <td>@result.CustomerFirstName</td>
+                    <td>@result.CustomerLastName</td>
+                    <td>@result.ManagerFirstName</td>
+                    <td>@result.ManagerLastName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No data available.</p>
+}

@@ -1,0 +1,18 @@
+﻿@model WebApplication2.Models.CustomerLoansAndInvestmentsCombinedViewModel
+
+<h2>Enter Customer ID</h2>
+
+<form asp-action="GetCustomerLoansAndInvestments" method="post">
+    <label for="CustomerId">Customer ID:</label>
+    <input asp-for="CustomerId" required />
+    <button type="submit">Submit</button>
+</form>
+
+@if(Model.Result != null)
+{
+    <h2>Customer Loans and Investments</h2>
+    <p>First Name: @Model.Result.FirstName</p>
+    <p>Last Name: @Model.Result.LastName</p>
+    <p>Total Loan Amount: @Model.Result.TotalLoanAmount</p>
+    <p>Total Investment: @Model.Result.TotalInvestment</p>
+}

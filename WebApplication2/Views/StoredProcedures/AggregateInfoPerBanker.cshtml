@@ -1,0 +1,15 @@
+﻿@model WebApplication2.Models.AggregateInfoPerBankerCombinedViewModel
+
+<h2>Aggregate Info Per Banker</h2>
+
+@if(Model.Results != null && Model.Results.Any())
+{
+    foreach(var result in Model.Results)
+    {
+        <h3>@result.FirstName @result.LastName</h3>
+        <p>Number Of Accounts Managed: @result.NumberOfAccountsManaged</p>
+        <p>Average Account Balance: @result.AverageAccountBalance</p>
+        <p>Total Loans Approved: @result.TotalLoansApproved</p>
+        <p>Average Loan Amount: @result.AverageLoanAmount</p>
+    }
+}
